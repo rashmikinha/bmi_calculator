@@ -1,38 +1,64 @@
-.App {
-  text-align: center;
+/* For WebKit browsers (Chrome, Safari) */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* For Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* For Edge */
+input[type="number"] {
+  -ms-appearance: none;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#root{
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height: 100vh;
+  width: 100vw;
 }
-
-.App-link {
-  color: #61dafb;
+.App{
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  padding: 50px 70px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.App h1{
+  font-size: 40px;
+  margin-bottom: 20px;
+  margin-top: 0;
+}
+.wrightheading,.heightcontainer{
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+.weightinput{
+  width: 100%;
+}
+.bmi-container input{
+  width: -webkit-fill-available;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+.btncontainer{
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  width: 100%;
+}
+.bmi-container button{
+  font-size: 20px;
+  font-weight: 700;
+  border: 1px solid #000;
+  background: #fff;
+  width: 50%;
+  padding: 10px 0;
+  cursor: pointer;
+}
+.bmi-container button:hover{
+  color: #fff;
+  background: #000;
 }
